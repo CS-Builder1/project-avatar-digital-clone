@@ -1,0 +1,4 @@
+.vercel
+.gemini
+node_modules
+*.log

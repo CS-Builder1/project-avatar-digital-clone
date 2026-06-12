@@ -1,0 +1,8 @@
+Place avatar images in this directory.
+
+Naming convention:
+- {name}_closeup_1.png, {name}_closeup_2.png
+- {name}_halfbody_1.png, {name}_halfbody_2.png
+- {name}_lifestyle_1.png, {name}_lifestyle_2.png
+
+Where {name} is: amara, isla, yuki, valentina, zara, sienna

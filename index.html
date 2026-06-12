@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FEARLESS — A Digital Avatar Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- NAVIGATION                                              -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav__logo">FEARLESS</a>
+    <div class="nav__links">
+      <a href="#gallery" class="nav__link">Collection</a>
+      <a href="#amara-section" class="nav__link">Avatars</a>
+      <a href="#social" class="nav__link">Templates</a>
+    </div>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 1 — HERO                                        -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <canvas class="hero__particles" id="particleCanvas"></canvas>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__pre-title reveal">A Digital Avatar Collection</p>
+      <h1 class="hero__title reveal">
+        <span class="hero__letter" data-delay="0">F</span><span class="hero__letter" data-delay="1">E</span><span class="hero__letter" data-delay="2">A</span><span class="hero__letter" data-delay="3">R</span><span class="hero__letter" data-delay="4">L</span><span class="hero__letter" data-delay="5">E</span><span class="hero__letter" data-delay="6">S</span><span class="hero__letter" data-delay="7">S</span>
+      </h1>
+      <div class="hero__line reveal"></div>
+      <p class="hero__tagline reveal">Six Women. Six Stories. One Fearless Spirit.</p>
+      <p class="hero__sub reveal">Curated for Ketisha &times; Fearless Jewellery by Eleanor Prospere</p>
+    </div>
+    <a href="#gallery" class="hero__scroll-indicator" aria-label="Scroll down">
+      <span class="hero__scroll-text">Explore</span>
+      <div class="hero__scroll-arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </div>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 2 — AVATAR GALLERY GRID                         -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="gallery" id="gallery">
+    <div class="section-header reveal">
+      <p class="section-label">The Collection</p>
+      <h2 class="section-title">Meet the Avatars</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="gallery__grid">
+      <!-- AMARA -->
+      <a href="#amara-section" class="gallery__card reveal" data-avatar="amara">
+        <div class="gallery__card-image" style="--placeholder-hue: 35;">
+          <img src="images/amara_closeup_1.png" alt="Amara — The Visionary" loading="lazy" onerror="this.style.display='none';" />
+          <div class="gallery__card-placeholder">AMARA</div>
+        </div>
+        <div class="gallery__card-overlay">
+          <div class="gallery__card-glass">
+            <span class="gallery__card-name">Amara</span>
+            <span class="gallery__card-title">The Visionary</span>
+            <span class="gallery__card-origin">West Africa</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ISLA -->
+      <a href="#isla-section" class="gallery__card reveal" data-avatar="isla">
+        <div class="gallery__card-image" style="--placeholder-hue: 180;">
+          <img src="images/isla_closeup_1.png" alt="Isla — The Cultural Curator" loading="lazy" onerror="this.style.display='none';" />
+          <div class="gallery__card-placeholder">ISLA</div>
+        </div>
+        <div class="gallery__card-overlay">
+          <div class="gallery__card-glass">
+            <span class="gallery__card-name">Isla</span>
+            <span class="gallery__card-title">The Cultural Curator</span>
+            <span class="gallery__card-origin">Caribbean</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- YUKI -->
+      <a href="#yuki-section" class="gallery__card reveal" data-avatar="yuki">
+        <div class="gallery__card-image" style="--placeholder-hue: 260;">
+          <img src="images/yuki_closeup_1.png" alt="Yuki — The Minimalist Rebel" loading="lazy" onerror="this.style.display='none';" />
+          <div class="gallery__card-placeholder">YUKI</div>
+        </div>
+        <div class="gallery__card-overlay">
+          <div class="gallery__card-glass">
+            <span class="gallery__card-name">Yuki</span>
+            <span class="gallery__card-title">The Minimalist Rebel</span>
+            <span class="gallery__card-origin">East Asia</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- VALENTINA -->
+      <a href="#valentina-section" class="gallery__card reveal" data-avatar="valentina">
+        <div class="gallery__card-image" style="--placeholder-hue: 15;">
+          <img src="images/valentina_closeup_1.png" alt="Valentina — The Passionate Creator" loading="lazy" onerror="this.style.display='none';" />
+          <div class="gallery__card-placeholder">VALENTINA</div>
+        </div>
+        <div class="gallery__card-overlay">
+          <div class="gallery__card-glass">
+            <span class="gallery__card-name">Valentina</span>
+            <span class="gallery__card-title">The Passionate Creator</span>
+            <span class="gallery__card-origin">South America</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ZARA -->
+      <a href="#zara-section" class="gallery__card reveal" data-avatar="zara">
+        <div class="gallery__card-image" style="--placeholder-hue: 320;">
+          <img src="images/zara_closeup_1.png" alt="Zara — The Elegant Disruptor" loading="lazy" onerror="this.style.display='none';" />
+          <div class="gallery__card-placeholder">ZARA</div>
+        </div>
+        <div class="gallery__card-overlay">
+          <div class="gallery__card-glass">
+            <span class="gallery__card-name">Zara</span>
+            <span class="gallery__card-title">The Elegant Disruptor</span>
+            <span class="gallery__card-origin">Middle East / North Africa</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- SIENNA -->
+      <a href="#sienna-section" class="gallery__card reveal" data-avatar="sienna">
+        <div class="gallery__card-image" style="--placeholder-hue: 45;">
+          <img src="images/sienna_closeup_1.png" alt="Sienna — The Modern Icon" loading="lazy" onerror="this.style.display='none';" />
+          <div class="gallery__card-placeholder">SIENNA</div>
+        </div>
+        <div class="gallery__card-overlay">
+          <div class="gallery__card-glass">
+            <span class="gallery__card-name">Sienna</span>
+            <span class="gallery__card-title">The Modern Icon</span>
+            <span class="gallery__card-origin">Northern Europe</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 3 — INDIVIDUAL AVATAR PROFILES                  -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+
+  <!-- ─── AMARA ─── -->
+  <section class="avatar-profile" id="amara-section" data-avatar="amara">
+    <div class="avatar-profile__bg-accent"></div>
+    <div class="avatar-profile__container">
+      <!-- Left: Gallery -->
+      <div class="avatar-profile__gallery reveal">
+        <div class="avatar-profile__main-image">
+          <img src="images/amara_closeup_1.png" alt="Amara" data-active onerror="this.style.display='none';" />
+          <div class="avatar-profile__placeholder">AMARA</div>
+        </div>
+        <div class="avatar-profile__thumbs">
+          <button class="avatar-profile__thumb active" data-src="images/amara_closeup_1.png" data-label="Close-up 1">
+            <div class="thumb-placeholder">1</div>
+          </button>
+          <button class="avatar-profile__thumb" data-src="images/amara_closeup_2.png" data-label="Close-up 2">
+            <div class="thumb-placeholder">2</div>
+          </button>
+          <button class="avatar-profile__thumb" data-src="images/amara_halfbody_1.png" data-label="Half-body 1">
+            <div class="thumb-placeholder">3</div>
+          </button>
+          <button class="avatar-profile__thumb" data-src="images/amara_halfbody_2.png" data-label="Half-body 2">
+            <div class="thumb-placeholder">4</div>
+          </button>
+          <button class="avatar-profile__thumb" data-src="images/amara_lifestyle_1.png" data-label="Lifestyle 1">
+            <div class="thumb-placeholder">5</div>
+          </button>
+          <button class="avatar-profile__thumb" data-src="images/amara_lifestyle_2.png" data-label="Lifestyle 2">
+            <div class="thumb-placeholder">6</div>
+          </button>
+        </div>
+      </div>
+      <!-- Right: Bio -->
+      <div class="avatar-profile__bio reveal">
+        <span class="avatar-profile__number">01</span>
+        <h2 class="avatar-profile__name">Amara</h2>
+        <p class="avatar-profile__title-line">The Visionary</p>
+        <div class="avatar-profile__divider"></div>
+        <div class="avatar-profile__meta">
+          <div class="meta-item"><span class="meta-label">Origin</span><span class="meta-value">West Africa — Nigerian / Ghanaian</span></div>
+          <div class="meta-item"><span class="meta-label">Profession</span><span class="meta-value">Self-made Tech Entrepreneur</span></div>
+        </div>
+        <div class="avatar-profile__story">
+          <h3>Backstory</h3>
+          <p>Born between Lagos and Accra, Amara rose from a modest upbringing to build one of West Africa's most innovative tech companies. Her vision for accessible technology across the continent has earned her a place among the world's most influential entrepreneurs. She moves through boardrooms and tech summits with the same regal presence her grandmother carried through the markets of Kumasi.</p>
+          <h3>Personality</h3>
+          <p>Bold confidence radiates from every gesture. Amara is unapologetically ambitious, fiercely intelligent, and deeply connected to her roots. She leads with both her mind and her heritage — a visionary who sees the future while honoring the past.</p>
+        </div>
+        <div class="avatar-profile__jewelry">
+          <h3>Fearless Jewellery</h3>
+          <div class="jewelry-item"><span class="jewelry-icon">◆</span> Sea Urchin Statement Earrings in 22K Gold</div>
+          <div class="jewelry-item"><span class="jewelry-icon">◆</span> Layered Gold Chains</div>
+        </div>
+        <div class="avatar-profile__appearance">
+          <h3>Styling Notes</h3>
+          <p>Warm deep skin tone, sculptural cheekbones, close-cropped natural hair or braided updo. Her look balances power dressing with organic African elegance — architectural silhouettes softened by warm gold accents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ISLA ─── -->
+  <section class="avatar-profile" id="isla-section" data-avatar="isla">
+    <div class="avatar-profile__bg-accent"></div>
+    <div class="avatar-profile__container">
+      <div class="avatar-profile__gallery reveal">
+        <div class="avatar-profile__main-image">
+          <img src="images/isla_closeup_1.png" alt="Isla" data-active onerror="this.style.display='none';" />
+          <div class="avatar-profile__placeholder">ISLA</div>
+        </div>
+        <div class="avatar-profile__thumbs">
+          <button class="avatar-profile__thumb active" data-src="images/isla_closeup_1.png" data-label="Close-up 1"><div class="thumb-placeholder">1</div></button>
+          <button class="avatar-profile__thumb" data-src="images/isla_closeup_2.png" data-label="Close-up 2"><div class="thumb-placeholder">2</div></button>
+          <button class="avatar-profile__thumb" data-src="images/isla_halfbody_1.png" data-label="Half-body 1"><div class="thumb-placeholder">3</div></button>
+          <button class="avatar-profile__thumb" data-src="images/isla_halfbody_2.png" data-label="Half-body 2"><div class="thumb-placeholder">4</div></button>
+          <button class="avatar-profile__thumb" data-src="images/isla_lifestyle_1.png" data-label="Lifestyle 1"><div class="thumb-placeholder">5</div></button>
+          <button class="avatar-profile__thumb" data-src="images/isla_lifestyle_2.png" data-label="Lifestyle 2"><div class="thumb-placeholder">6</div></button>
+        </div>
+      </div>
+      <div class="avatar-profile__bio reveal">
+        <span class="avatar-profile__number">02</span>
+        <h2 class="avatar-profile__name">Isla</h2>
+        <p class="avatar-profile__title-line">The Cultural Curator</p>
+        <div class="avatar-profile__divider"></div>
+        <div class="avatar-profile__meta">
+          <div class="meta-item"><span class="meta-label">Origin</span><span class="meta-value">Caribbean — St. Lucian / Trinidadian</span></div>
+          <div class="meta-item"><span class="meta-label">Profession</span><span class="meta-value">Award-winning Cultural Anthropologist &amp; Gallery Owner</span></div>
+        </div>
+        <div class="avatar-profile__story">
+          <h3>Backstory</h3>
+          <p>Raised between the lush peaks of St. Lucia and the vibrant streets of Port of Spain, Isla grew up immersed in the rich tapestry of Caribbean culture. After earning her doctorate in cultural anthropology, she opened a gallery dedicated to Caribbean and diaspora artists, creating a space where stories of resilience, beauty, and identity are told through art. Her work bridges the ancestral and the contemporary.</p>
+          <h3>Personality</h3>
+          <p>Warm, magnetic, and endlessly curious. Isla draws people in with her infectious smile and keeps them with her depth. She is both the storyteller and the story — a woman who carries the rhythm of the Caribbean in everything she does.</p>
+        </div>
+        <div class="avatar-profile__jewelry">
+          <h3>Fearless Jewellery</h3>
+          <div class="jewelry-item"><span class="jewelry-icon">◆</span> Fearless Belly Chain in Gold</div>
+          <div class="jewelry-item"><span class="jewelry-icon">◆</span> Sea Urchin Pendant Necklace</div>
+        </div>
+        <div class="avatar-profile__appearance">
+          <h3>Styling Notes</h3>
+          <p>Sun-kissed brown skin, loose natural curls cascading freely, and a warm smile that lights up every room. Her style is effortlessly tropical-luxe — flowing fabrics, vibrant prints, and gold jewelry that catches the Caribbean sun.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── YUKI ─── -->
+  <section class="avatar-profile" id="yuki-section" data-avatar="yuki">
+    <div class="avatar-profile__bg-accent"></div>
+    <div class="avatar-profile__container">
+      <div class="avatar-profile__gallery reveal">
+        <div class="avatar-profile__main-image">
+          <img src="images/yuki_closeup_1.png" alt="Yuki" data-active onerror="this.style.display='none';" />
+          <div class="avatar-profile__placeholder">YUKI</div>
+        </div>
+        <div class="avatar-profile__thumbs">
+          <button class="avatar-profile__thumb active" data-src="images/yuki_closeup_1.png" data-label="Close-up 1"><div class="thumb-placeholder">1</div></button>
+          <button class="avatar-profile__thumb" data-src="images/yuki_closeup_2.png" data-label="Close-up 2"><div class="thumb-placeholder">2</div></button>
+          <button class="avatar-profile__thumb" data-src="images/yuki_halfbody_1.png" data-label="Half-body 1"><div class="thumb-placeholder">3</div></button>
+          <button class="avatar-profile__thumb" data-src="images/yuki_halfbody_2.png" data-label="Half-body 2"><div class="thumb-placeholder">4</div></button>
+          <button class="avatar-profile__thumb" data-src="images/yuki_lifestyle_1.png" data-label="Lifestyle 1"><div class="thumb-placeholder">5</div></button>
+          <button class="avatar-profile__thumb" data-src="images/yuki_lifestyle_2.png" data-label="Lifestyle 2"><div class="thumb-placeholder">6</div></button>
+        </div>
+      </div>
+      <div class="avatar-profile__bio reveal">
+        <span class="avatar-profile__number">03</span>
+        <h2 class="avatar-profile__name">Yuki</h2>
+        <p class="avatar-profile__title-line">The Minimalist Rebel</p>
+        <div class="avatar-profile__divider"></div>
+        <div class="avatar-profile__meta">
+          <div class="meta-item"><span class="meta-label">Origin</span><span class="meta-value">East Asia — Japanese</span></div>
+          <div class="meta-item"><span class="meta-label">Profession</span><span class="meta-value">Avant-garde Fashion Designer</span></div>
+        </div>
+        <div class="avatar-profile__story">
+          <h3>Backstory</h3>
+          <p>From the quiet precision of Kyoto's artisan workshops to the electric chaos of Tokyo's Harajuku, Yuki forged her aesthetic in the space between tradition and rebellion. Her fashion label challenges conventions — deconstructing classic Japanese silhouettes and reconstructing them with a fearless, modern edge. She has shown at Paris, Milan, and Tokyo Fashion Weeks, always leaving audiences in stunned silence.</p>
+          <h3>Personality</h3>
+          <p>Understated power defines Yuki. She speaks softly but her designs scream. Behind the piercing gaze lies a woman of immense discipline, dry humor, and an uncompromising commitment to her craft. Minimalism is not simplicity — it is the art of saying everything with almost nothing.</p>
+        </div>
+        <div class="avatar-profile__jewelry">
+          <h3>Fearless Jewellery</h3>
+          <div class="jewelry-item"><span class="jewelry-icon">◆</span> Single Fearless Architectural Cuff Bracelet</div>
+          <div class="jewelry-item"><span class="jewelry-icon">◆</span> Minimalist Gold Ear Cuff</div>
+        </div>
+        <div class="avatar-profile__appearance">
+          <h3>Styling Notes</h3>
+          <p>Porcelain skin, a sharp geometric bob, and a piercing gaze that commands attention without effort. Her wardrobe is monochromatic precision — clean lines, sculptural forms, and a single piece of Fearless gold that becomes the focal point of every look.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── VALENTINA ─── -->
+  <section class="avatar-profile" id="valentina-section" data-avatar="valentina">
+    <div class="avatar-profile__bg-accent"></div>
+    <div class="avatar-profile__container">
+      <div class="avatar-profile__gallery reveal">
+        <div class="avatar-profile__main-image">
+          <img src="images/valentina_closeup_1.png" alt="Valentina" data-active onerror="this.style.display='none';" />
+          <div class="avatar-profile__placeholder">VALENTINA</div>
+        </div>
+        <div class="avatar-profile__thumbs">
+          <button class="avatar-profile__thumb active" data-src="images/valentina_closeup_1.png" data-label="Close-up 1"><div class="thumb-placeholder">1</div></button>
+          <button class="avatar-profile__thumb" data-src="images/valentina_closeup_2.png" data-label="Close-up 2"><div class="thumb-placeholder">2</div></button>
+          <button class="avatar-profile__thumb" data-src="images/valentina_halfbody_1.png" data-label="Half-body 1"><div class="thumb-placeholder">3</div></button>
+          <button class="avatar-profile__thumb" data-src="images/valentina_halfbody_2.png" data-label="Half-body 2"><div class="thumb-placeholder">4</div></button>
+          <button class="avatar-profile__thumb" data-src="images/valentina_lifestyle_1.png" data-label="Lifestyle 1"><div class="thumb-placeholder">5</div></button>
+          <button class="avatar-profile__thumb" data-src="images/valentina_lifestyle_2.png" data-label="Lifestyle 2"><div class="thumb-placeholder">6</div></button>
+        </div>
+      </div>
+      <div class="avatar-profile__bio reveal">
+        <span class="avatar-profile__number">04</span>
+        <h2 class="avatar-profile__name">Valentina</h2>
+        <p class="avatar-profile__title-line">The Passionate Creator</p>
+        <div class="avatar-profile__divider"></div>
+        <div class="avatar-profile__meta">
+          <div class="meta-item"><span class="meta-label">Origin</span><span class="meta-value">South America — Brazilian / Colombian</span></div>
+          <div class="meta-item"><span class="meta-label">Profession</span><span class="meta-value">Celebrated Muralist &amp; Community Activist</span></div>
+        </div>
+        <div class="avatar-profile__story">
+          <h3>Backstory</h3>
+          <p>Valentina's canvas is the city itself. From the favelas of São Paulo to the colorful barrios of Bogotá, her massive murals tell stories of hope, resistance, and the unbreakable spirit of Latin American women. She paints with the same fire that fuels her activism — organizing community art programs, mentoring young artists, and using her platform to amplify marginalized voices.</p>
+          <h3>Personality</h3>
+          <p>Passionate, expressive, and impossible to ignore. Valentina wears her heart on her sleeve and her convictions on the walls. She laughs loudly, loves deeply, and creates with an urgency that comes from knowing art can change the world.</p>
+        </div>
+        <div class="avatar-profile__jewelry">
+          <h3>Fearless Jewellery</h3>
+          <div class="jewelry-item"><span class="jewelry-icon">◆</span> Fearless Organic Gold Statement Necklace</div>
+          <div class="jewelry-item"><span class="jewelry-icon">◆</span> Stacking Rings</div>
+        </div>
+        <div class="avatar-profile__appearance">
+          <h3>Styling Notes</h3>
+          <p>Warm olive-bronze skin, thick dark wavy hair that moves with energy, and expressive eyes that burn with passion. Her style is vibrant bohemian-luxe — rich colors, artisan textures, and Fearless gold that feels like wearable art against her sun-warmed skin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ZARA ─── -->
+  <section class="avatar-profile" id="zara-section" data-avatar="zara">
+    <div class="avatar-profile__bg-accent"></div>
+    <div class="avatar-profile__container">
+      <div class="avatar-profile__gallery reveal">
+        <div class="avatar-profile__main-image">
+          <img src="images/zara_closeup_1.png" alt="Zara" data-active onerror="this.style.display='none';" />
+          <div class="avatar-profile__placeholder">ZARA</div>
+        </div>
+        <div class="avatar-profile__thumbs">
+          <button class="avatar-profile__thumb active" data-src="images/zara_closeup_1.png" data-label="Close-up 1"><div class="thumb-placeholder">1</div></button>
+          <button class="avatar-profile__thumb" data-src="images/zara_closeup_2.png" data-label="Close-up 2"><div class="thumb-placeholder">2</div></button>
+          <button class="avatar-profile__thumb" data-src="images/zara_halfbody_1.png" data-label="Half-body 1"><div class="thumb-placeholder">3</div></button>
+          <button class="avatar-profile__thumb" data-src="images/zara_halfbody_2.png" data-label="Half-body 2"><div class="thumb-placeholder">4</div></button>
+          <button class="avatar-profile__thumb" data-src="images/zara_lifestyle_1.png" data-label="Lifestyle 1"><div class="thumb-placeholder">5</div></button>
+          <button class="avatar-profile__thumb" data-src="images/zara_lifestyle_2.png" data-label="Lifestyle 2"><div class="thumb-placeholder">6</div></button>
+        </div>
+      </div>
+      <div class="avatar-profile__bio reveal">
+        <span class="avatar-profile__number">05</span>
+        <h2 class="avatar-profile__name">Zara</h2>
+        <p class="avatar-profile__title-line">The Elegant Disruptor</p>
+        <div class="avatar-profile__divider"></div>
+        <div class="avatar-profile__meta">
+          <div class="meta-item"><span class="meta-label">Origin</span><span class="meta-value">Middle East / North Africa — Moroccan / Lebanese</span></div>
+          <div class="meta-item"><span class="meta-label">Profession</span><span class="meta-value">Human Rights Lawyer &amp; Fashion Philanthropist</span></div>
+        </div>
+        <div class="avatar-profile__story">
+          <h3>Backstory</h3>
+          <p>Zara walks between two worlds with effortless grace — the marbled halls of international courts and the ateliers of Marrakech and Beirut. After a distinguished career in human rights law, she channeled her influence into fashion philanthropy, funding artisan cooperatives and ethical luxury initiatives across the MENA region. She proves that elegance and justice are not mutually exclusive.</p>
+          <h3>Personality</h3>
+          <p>Poised, sharp, and devastatingly elegant. Zara disrupts with sophistication — her arguments are as precisely constructed as her wardrobe. Beneath the polished exterior is a fiercely compassionate woman who has seen the world's injustices and chosen to fight them in stilettos.</p>
+        </div>
+        <div class="avatar-profile__jewelry">
+          <h3>Fearless Jewellery</h3>
+          <div class="jewelry-item"><span class="jewelry-icon">◆</span> Ornate Fearless Gold Cuff Bracelet</div>
+          <div class="jewelry-item"><span class="jewelry-icon">◆</span> Statement Drop Earrings</div>
+        </div>
+        <div class="avatar-profile__appearance">
+          <h3>Styling Notes</h3>
+          <p>Olive skin, dark striking eyes framed by strong brows, and elegant bone structure that photographs like sculpture. Her style marries MENA opulence with modern minimalism — draped silks, structured blazers, and ornate Fearless gold that whispers of ancient craftsmanship.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SIENNA ─── -->
+  <section class="avatar-profile" id="sienna-section" data-avatar="sienna">
+    <div class="avatar-profile__bg-accent"></div>
+    <div class="avatar-profile__container">
+      <div class="avatar-profile__gallery reveal">
+        <div class="avatar-profile__main-image">
+          <img src="images/sienna_closeup_1.png" alt="Sienna" data-active onerror="this.style.display='none';" />
+          <div class="avatar-profile__placeholder">SIENNA</div>
+        </div>
+        <div class="avatar-profile__thumbs">
+          <button class="avatar-profile__thumb active" data-src="images/sienna_closeup_1.png" data-label="Close-up 1"><div class="thumb-placeholder">1</div></button>
+          <button class="avatar-profile__thumb" data-src="images/sienna_closeup_2.png" data-label="Close-up 2"><div class="thumb-placeholder">2</div></button>
+          <button class="avatar-profile__thumb" data-src="images/sienna_halfbody_1.png" data-label="Half-body 1"><div class="thumb-placeholder">3</div></button>
+          <button class="avatar-profile__thumb" data-src="images/sienna_halfbody_2.png" data-label="Half-body 2"><div class="thumb-placeholder">4</div></button>
+          <button class="avatar-profile__thumb" data-src="images/sienna_lifestyle_1.png" data-label="Lifestyle 1"><div class="thumb-placeholder">5</div></button>
+          <button class="avatar-profile__thumb" data-src="images/sienna_lifestyle_2.png" data-label="Lifestyle 2"><div class="thumb-placeholder">6</div></button>
+        </div>
+      </div>
+      <div class="avatar-profile__bio reveal">
+        <span class="avatar-profile__number">06</span>
+        <h2 class="avatar-profile__name">Sienna</h2>
+        <p class="avatar-profile__title-line">The Modern Icon</p>
+        <div class="avatar-profile__divider"></div>
+        <div class="avatar-profile__meta">
+          <div class="meta-item"><span class="meta-label">Origin</span><span class="meta-value">Northern Europe — Scandinavian / British</span></div>
+          <div class="meta-item"><span class="meta-label">Profession</span><span class="meta-value">Climate Scientist &amp; Sustainable Luxury Advocate</span></div>
+        </div>
+        <div class="avatar-profile__story">
+          <h3>Backstory</h3>
+          <p>Sienna traded the sterile corridors of a climate research institute for the glamorous world of sustainable luxury — not because she left science behind, but because she brought it with her. Her advocacy for ethical sourcing and zero-waste design has reshaped how luxury brands think about sustainability. She is proof that the future of luxury is responsible, beautiful, and non-negotiable.</p>
+          <h3>Personality</h3>
+          <p>Thoughtful, articulate, and radiantly composed. Sienna approaches every challenge with scientific precision and a poet's sensitivity. She is the calm voice in the room that everyone listens to — not because she speaks loudest, but because she speaks truest.</p>
+        </div>
+        <div class="avatar-profile__jewelry">
+          <h3>Fearless Jewellery</h3>
+          <div class="jewelry-item"><span class="jewelry-icon">◆</span> Fearless Minimalist Gold Chain Necklace</div>
+          <div class="jewelry-item"><span class="jewelry-icon">◆</span> Delicate Sea Urchin Stud Earrings</div>
+        </div>
+        <div class="avatar-profile__appearance">
+          <h3>Styling Notes</h3>
+          <p>Fair skin with a constellation of light freckles, strawberry-blonde hair styled in effortless waves. Her aesthetic is Scandinavian clean meets British tailoring — neutral palettes, impeccable cuts, and Fearless gold that adds warmth to her cool-toned elegance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 4 — SOCIAL MEDIA TEMPLATES                      -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="social" id="social">
+    <div class="section-header reveal">
+      <p class="section-label">Digital Marketing</p>
+      <h2 class="section-title">Social Media Templates</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Platform-optimized templates ready for deployment across all major social channels.</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="social__tabs reveal">
+      <button class="social__tab active" data-platform="instagram">Instagram</button>
+      <button class="social__tab" data-platform="facebook">Facebook</button>
+      <button class="social__tab" data-platform="tiktok">TikTok</button>
+      <button class="social__tab" data-platform="linkedin">LinkedIn</button>
+    </div>
+
+    <!-- Tab Panels -->
+    <div class="social__panels">
+
+      <!-- Instagram -->
+      <div class="social__panel active" data-platform="instagram">
+        <div class="social__template-grid">
+          <div class="social__template reveal">
+            <div class="social__template-frame" style="--aspect: 1 / 1;">
+              <div class="social__template-mockup">
+                <div class="social__template-header">
+                  <div class="social__template-avatar-circle"></div>
+                  <span>fearlessjewellery</span>
+                </div>
+                <div class="social__template-image-area">
+                  <span>Avatar Image</span>
+                </div>
+                <div class="social__template-footer-bar">
+                  <span>♡</span><span>💬</span><span>↗</span>
+                </div>
+              </div>
+            </div>
+            <div class="social__template-info">
+              <h4>Instagram Post</h4>
+              <span class="social__template-size">1080 × 1080 px</span>
+              <p>Square format post — perfect for avatar portrait reveals and jewelry close-ups.</p>
+            </div>
+          </div>
+          <div class="social__template reveal">
+            <div class="social__template-frame" style="--aspect: 9 / 16;">
+              <div class="social__template-mockup social__template-mockup--story">
+                <div class="social__template-story-top">
+                  <div class="social__template-progress"></div>
+                  <div class="social__template-story-header">
+                    <div class="social__template-avatar-circle small"></div>
+                    <span>fearlessjewellery</span>
+                  </div>
+                </div>
+                <div class="social__template-image-area">
+                  <span>Avatar Image</span>
+                </div>
+                <div class="social__template-story-cta">Swipe Up</div>
+              </div>
+            </div>
+            <div class="social__template-info">
+              <h4>Story / Reel</h4>
+              <span class="social__template-size">1080 × 1920 px</span>
+              <p>Vertical full-screen format — ideal for immersive avatar storytelling and behind-the-scenes content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Facebook -->
+      <div class="social__panel" data-platform="facebook">
+        <div class="social__template-grid">
+          <div class="social__template reveal">
+            <div class="social__template-frame" style="--aspect: 1200 / 630;">
+              <div class="social__template-mockup social__template-mockup--fb">
+                <div class="social__template-header">
+                  <div class="social__template-avatar-circle"></div>
+                  <div>
+                    <span style="font-weight:600;">Fearless Jewellery</span>
+                    <small style="display:block;opacity:.5;font-size:10px;">Sponsored · 🌍</small>
+                  </div>
+                </div>
+                <div class="social__template-image-area">
+                  <span>Avatar Image</span>
+                </div>
+                <div class="social__template-footer-bar">
+                  <span>👍 Like</span><span>💬 Comment</span><span>↗ Share</span>
+                </div>
+              </div>
+            </div>
+            <div class="social__template-info">
+              <h4>Facebook Post</h4>
+              <span class="social__template-size">1200 × 630 px</span>
+              <p>Landscape link-share format — optimized for feed visibility and engagement.</p>
+            </div>
+          </div>
+          <div class="social__template reveal">
+            <div class="social__template-frame" style="--aspect: 820 / 312;">
+              <div class="social__template-mockup social__template-mockup--cover">
+                <div class="social__template-image-area">
+                  <span>Cover Photo</span>
+                  <small>Fearless Jewellery — Avatar Collection</small>
+                </div>
+              </div>
+            </div>
+            <div class="social__template-info">
+              <h4>Facebook Cover</h4>
+              <span class="social__template-size">820 × 312 px</span>
+              <p>Ultra-wide banner format — showcases multiple avatars in a panoramic composition.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TikTok -->
+      <div class="social__panel" data-platform="tiktok">
+        <div class="social__template-grid social__template-grid--centered">
+          <div class="social__template reveal">
+            <div class="social__template-frame" style="--aspect: 9 / 16;">
+              <div class="social__template-mockup social__template-mockup--tiktok">
+                <div class="social__template-image-area">
+                  <span>Avatar Video Cover</span>
+                </div>
+                <div class="social__template-tiktok-side">
+                  <span>♡</span>
+                  <span>💬</span>
+                  <span>↗</span>
+                  <div class="social__template-avatar-circle small"></div>
+                </div>
+                <div class="social__template-tiktok-bottom">
+                  <strong>@fearlessjewellery</strong>
+                  <p>Meet AMARA — The Visionary ✨ #FearlessJewellery #DigitalAvatar</p>
+                  <div class="social__template-tiktok-music">🎵 Original Sound - Fearless</div>
+                </div>
+              </div>
+            </div>
+            <div class="social__template-info">
+              <h4>TikTok Cover</h4>
+              <span class="social__template-size">1080 × 1920 px</span>
+              <p>Vertical video cover — designed for maximum impact in the TikTok feed with bold avatar reveals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="social__panel" data-platform="linkedin">
+        <div class="social__template-grid social__template-grid--centered">
+          <div class="social__template reveal">
+            <div class="social__template-frame" style="--aspect: 1200 / 627;">
+              <div class="social__template-mockup social__template-mockup--linkedin">
+                <div class="social__template-header">
+                  <div class="social__template-avatar-circle"></div>
+                  <div>
+                    <span style="font-weight:600;">Fearless Jewellery</span>
+                    <small style="display:block;opacity:.5;font-size:10px;">1,234 followers · Luxury Brand</small>
+                  </div>
+                </div>
+                <div class="social__template-image-area">
+                  <span>Avatar Image</span>
+                  <small>Professional Brand Storytelling</small>
+                </div>
+                <div class="social__template-footer-bar">
+                  <span>👍 Like</span><span>💬 Comment</span><span>🔄 Repost</span><span>↗ Send</span>
+                </div>
+              </div>
+            </div>
+            <div class="social__template-info">
+              <h4>LinkedIn Post</h4>
+              <span class="social__template-size">1200 × 627 px</span>
+              <p>Professional landscape format — positions the avatar collection as a premium brand narrative for B2B and industry audiences.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 5 — FOOTER                                      -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer__glow"></div>
+    <div class="footer__content">
+      <div class="footer__brand">
+        <h2 class="footer__logo">FEARLESS</h2>
+        <p class="footer__tagline">A Digital Avatar Collection</p>
+      </div>
+      <div class="footer__divider"></div>
+      <div class="footer__credits">
+        <p>Created for <strong>Ketisha</strong> &times; <strong>Fearless Jewellery</strong></p>
+        <p>Founded by <strong>Eleanor Prospere</strong> &mdash; St. Lucia</p>
+      </div>
+      <div class="footer__links">
+        <a href="https://fearlessjewellery.com" target="_blank" rel="noopener noreferrer" class="footer__link">
+          fearlessjewellery.com
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+          </svg>
+        </a>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Fearless Jewellery. All avatars are digital creations for marketing purposes.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
