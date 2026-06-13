@@ -2,3 +2,6 @@
 .gemini
 node_modules
 *.log
+task.md
+walkthrough.md
+implementation_plan.md

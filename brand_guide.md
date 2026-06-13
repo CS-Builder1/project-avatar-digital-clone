@@ -268,6 +268,305 @@ Poised and intellectually sharp. Speaks with scientific precision but genuine wa
 
 ---
 
+### 07 — ZURI · *The Modern Sovereign*
+
+> *"True strength is quiet, sustainable, and deeply rooted."*
+
+| Attribute | Detail |
+|-----------|--------|
+| **Full Name** | Zuri M'baye |
+| **Origin** | East Africa — Swahili Coast (Kenyan/Tanzanian heritage) |
+| **Age** | Early 30s |
+| **Profession** | Luxury eco-tourism pioneer & hospitality founder |
+| **Social Status** | Born to conservationists, built an award-winning eco-lodge brand |
+| **Life Goal** | To prove that conservation, community, and high-end luxury can coexist |
+
+**Physical Signature:**
+Strikingly tall, deep mahogany skin with a radiant glow, completely shaved head showing off perfect symmetry and elegant bone structure. Majestic, regal posture.
+
+**Personality:**
+Dignified and highly articulate. Passionately committed to environmentalism. Carries a magnetic, calm presence that commands attention without effort.
+
+**Fearless Jewelry Pairings:**
+- 22k gold collar neck ring (signature piece)
+- Sculptural gold ear cuffs
+- Solid gold chunky rings
+- Stacking gold bangles with organic textures
+
+**Styling Notes:**
+- Structured drapery and sweeping silk capes
+- Rich warm earth tones: ochre, terracotta, deep chocolate, and bronze
+- Clean geometric silhouettes contrasting with organic jewelry forms
+
+**Content Themes:** Sustainable luxury, ocean conservation, hospitality as art, African heritage, quiet confidence
+
+---
+
+### 08 — KIRAN · *The Avant-Garde Sculptor*
+
+> *"Form follows feeling, and jewelry is emotion cast in gold."*
+
+| Attribute | Detail |
+|-----------|--------|
+| **Full Name** | Kiran Patel |
+| **Origin** | South Asia — Indian heritage (raised between Mumbai and Berlin) |
+| **Age** | Late 20s |
+| **Profession** | Industrial designer & large-scale metal sculptor |
+| **Social Status** | Independent creator, broke traditional expectations to study metalworking |
+| **Life Goal** | To merge industrial metal design with fluid organic jewelry aesthetics |
+
+**Physical Signature:**
+Warm olive skin with golden undertones, completely shaved head, large expressive dark almond eyes, strong dark brows, and sharp cheekbones. Raw, unfiltered creative energy.
+
+**Personality:**
+Intensely focused and intellectual. Quietly confident. Speaks with a calm, analytical tone but shows boundless passion for her craft.
+
+**Fearless Jewelry Pairings:**
+- Bold geometric gold rings worn on multiple fingers (hero styling)
+- Solid gold torc necklace with textured organic ends
+- Architectural gold ear wrap
+
+**Styling Notes:**
+- Minimalist deconstructed tailoring (all-black linen or dark raw silk)
+- Asymmetrical cuts, boxy blazers, and utility-luxe details
+- Zero color except for the glowing 22k gold jewelry accents
+
+**Content Themes:** Metal craftsmanship, industrial chic, breaking convention, artistic focus, the architecture of adornment
+
+---
+
+### 09 — KAI · *The Maritime Visionary*
+
+> *"The ocean gives us everything; luxury is honoring that gift."*
+
+| Attribute | Detail |
+|-----------|--------|
+| **Full Name** | Kai Luong-Taholo |
+| **Origin** | Pacific Islands / East Asia mixed heritage (Hawaii/Vietnam) |
+| **Age** | Mid 20s |
+| **Profession** | Marine biologist & sustainable pearl farmer |
+| **Social Status** | Rose from a coastal fishing community to pioneering blue-economy luxury |
+| **Life Goal** | To restore marine ecosystems while cultivating ethical ocean-grown materials |
+
+**Physical Signature:**
+Sun-bronzed skin with warm copper undertones, athletic build, short dark hair styled in a neat textured crop, warm sea-green/brown eyes. Approachable, radiant coastal beauty.
+
+**Personality:**
+Charismatic and adventurous. Deeply spiritual and connected to the ocean. Serene under pressure, speaks with infectious enthusiasm about marine science.
+
+**Fearless Jewelry Pairings:**
+- Textured gold chain necklace with a raw sea-urchin/gold pendant (hero piece)
+- Simple gold ear cuff
+- Heavy gold signet ring with ocean-texture engravings
+
+**Styling Notes:**
+- Relaxed coastal luxury: high-quality raw linen shirts in cream and parchment
+- Structured dark slate or charcoal trousers
+- Open collar necklines to highlight raw pendants and gold chains
+
+**Content Themes:** Blue economy, ocean restoration, coastal living, raw luxury, heritage and nature
+
+---
+
+### 10 — ARAM · *The Heritage Architect*
+
+> *"We don't build to replace history; we build to frame it."*
+
+| Attribute | Detail |
+|-----------|--------|
+| **Full Name** | Aram Haddad |
+| **Origin** | Levant — Lebanese/Syrian heritage (raised in Beirut and Paris) |
+| **Age** | Early 30s |
+| **Profession** | Restoration architect & museum designer |
+| **Social Status** | Born to classical musicians, dedicated to preserving heritage sites |
+| **Life Goal** | To bridge ancient Levantine forms with contemporary luxury design |
+
+**Physical Signature:**
+Olive skin, striking dark almond eyes with thick defined brows, short-trimmed neat beard and sharp jawline. Refined, timeless elegance. Dark hair styled back.
+
+**Personality:**
+Cultured, strategical, and soft-spoken. Moves with the grace of a diplomat. Deeply passionate about historical preservation and the stories behind objects.
+
+**Fearless Jewelry Pairings:**
+- Heavy textured 22k gold signet ring (signature power accessory)
+- Sculptural gold lapel pin/brooch
+- Textured gold link chain bracelet
+
+**Styling Notes:**
+- Classic tailoring: double-breasted charcoal blazers, dark silk pocket squares
+- High-necked charcoal or black sweaters highlighting statement rings
+- Monochromatic dark palette (obsidian black, slate grey) to make the gold pop
+
+**Content Themes:** Architectural heritage, the art of preservation, classical influences, timeless design, detail-oriented luxury
+
+---
+
+### 11 — TARIQ · *The Heritage Pioneer*
+
+> *"Traditional wisdom and sustainable innovation build the future."*
+
+| Attribute | Detail |
+|-----------|--------|
+| **Full Name** | Tariq Osei |
+| **Origin** | West Africa — Ghanaian heritage (raised in London) |
+| **Age** | Late 20s |
+| **Profession** | Sustainable architecture designer & urban planner |
+| **Social Status** | Studied at Cambridge, designing green urban spaces in Accra & London |
+| **Life Goal** | To rebuild African cities using sustainable, gold-accented materials |
+
+**Physical Signature:**
+Deep dark skin with warm undertones, short sharp fade haircut, strong jawline, and a clean neat beard. Intellectual but athletic presence, serene confident gaze.
+
+**Personality:**
+Strategic and articulate. Passionate about green architecture and historical restoration. Moves with quiet purpose and speaks with deliberate clarity.
+
+**Fearless Jewelry Pairings:**
+- Heavy textured 22k gold signet rings (hero accessory)
+- Solid gold chain choker
+- Simple gold ear studs
+
+**Styling Notes:**
+- Classic tailoring: double-breasted charcoal blazers, dark raw linen shirts
+- Monochromatic dark palette (obsidian black, slate grey)
+- Exposed neckline to highlight structured gold chokers
+
+**Content Themes:** Green cities, African craftsmanship, sustainability, modern heritage, strategic luxury
+
+---
+
+### 12 — MALACHI · *The Rhythmic Curator*
+
+> *"Music is the architecture of the soul; gold is its armor."*
+
+| Attribute | Detail |
+|-----------|--------|
+| **Full Name** | Malachi Sterling |
+| **Origin** | Caribbean — Jamaican heritage (raised in London) |
+| **Age** | Early 30s |
+| **Profession** | Record producer & visual sound artist |
+| **Social Status** | Self-made pioneer blending dub reggae roots with classical scoring |
+| **Life Goal** | To preserve sonic archives and celebrate Afro-Caribbean music history |
+
+**Physical Signature:**
+Luminous dark skin, warm dark eyes, and long mature dreadlocks styled up in an elegant bun with gold threads woven through. Serene, wise presence.
+
+**Personality:**
+Charismatic, relaxed, and deeply philosophical. Speaks with a melodic, low tone that commands the room. Highly creative and detail-oriented.
+
+**Fearless Jewelry Pairings:**
+- Layered textured gold chains (signature styling)
+- Detailed gold ear cuffs
+- Thick organic 22k gold cuff bracelet
+
+**Styling Notes:**
+- Relaxed luxury: open-collared dark silk shirts, rich velvet blazers
+- Warm gold-threaded accents in styling and hair
+- Textured layers in dark, premium fabrics (silk, linen, velvet)
+
+**Content Themes:** Sonic art, Caribbean pride, roots and rhythm, sensory luxury, musical history
+
+---
+
+### 13 — KENJI · *The Tech Philanthropist*
+
+> *"True innovation is about equity, capital, and building doors where there were walls."*
+
+| Attribute | Detail |
+|-----------|--------|
+| **Full Name** | Kenji Takahashi-Jackson |
+| **Origin** | Mixed — Afro-American & Japanese heritage (San Francisco/Tokyo) |
+| **Age** | Late 20s |
+| **Profession** | Venture capitalist & AI incubator founder |
+| **Social Status** | Tech pioneer using venture capital to fund minority-owned startups |
+| **Life Goal** | To bridge the racial wealth and tech access gaps globally |
+
+**Physical Signature:**
+Warm golden-brown skin, striking dark eyes, short curly hair styled in a clean taper fade, athletic build, and a defined jawline. Sharp, strategic, and energetic presence.
+
+**Personality:**
+Highly analytical yet exceptionally warm and approachable. Energetic speaker, brilliant strategist, and dedicated mentor.
+
+**Fearless Jewelry Pairings:**
+- Minimalist architectural 22k gold wrist cuff (hero piece)
+- Thin gold chain collar
+- Geometric gold power rings
+
+**Styling Notes:**
+- Tailored luxury sportswear, structured high-necked sweaters
+- Clean minimalist lines, modern tech-wear blazers
+- All-black outfits with a single glowing gold accent
+
+**Content Themes:** Venture capital for good, diversity in tech, artificial intelligence, modern minimalist style, next-gen leadership
+
+---
+
+### 14 — MEI-LING · *The Culinary Alchemist*
+
+> *"Food tells the story of our migrations, our struggles, and our triumph."*
+
+| Attribute | Detail |
+|-----------|--------|
+| **Full Name** | Mei-Ling Jackson-Tanaka |
+| **Origin** | Mixed — Jamaican & Taiwanese heritage (New York/Taipei) |
+| **Age** | Early 30s |
+| **Profession** | Michelin-starred chef & culinary anthropologist |
+| **Social Status** | Created a world-famous dining concept fusing Caribbean and Asian foodways |
+| **Life Goal** | To document the historical food connections between Asia and the Caribbean |
+
+**Physical Signature:**
+Warm caramel skin, dark curly-wavy hair pulled up in a messy bun with gold pins, warm expressive almond-shaped eyes, elegant bone structure.
+
+**Personality:**
+Passionate, vivacious, and highly creative. Speaks with direct warmth and storytelling flair. Possesses boundless culinary curiosity.
+
+**Fearless Jewelry Pairings:**
+- Organic textured gold hoop earrings (signature style)
+- Layered thin gold chains
+- Stacking gold rings on multiple fingers
+
+**Styling Notes:**
+- Draped linen kimonos, silk chef coats in obsidian black
+- Minimalist dark-toned luxury silhouettes, exposed necklines
+- Gold hairpins as a functional visual highlight
+
+**Content Themes:** Culinary anthropology, fusion gastronomy, dual heritage, sustainable fine dining, sensory art
+
+---
+
+### 15 — NAOMI · *The Cyber-Punk Activist*
+
+> *"Indigenous sovereignty isn't just physical; it is digital, virtual, and eternal."*
+
+| Attribute | Detail |
+|-----------|--------|
+| **Full Name** | Naomi Yazzie |
+| **Origin** | Mixed — Navajo (Diné) & Scandinavian heritage |
+| **Age** | Mid 20s |
+| **Profession** | Digital fashion designer & decentralized developer |
+| **Social Status** | Fuses indigenous weaving patterns with virtual cyber-punk aesthetics |
+| **Life Goal** | To protect indigenous digital sovereignty and intellectual property |
+
+**Physical Signature:**
+Warm copper skin, striking high cheekbones, intense piercing dark eyes, and a punk-luxe haircut with shaved sides and a long textured dark braid down the center.
+
+**Personality:**
+Quietly fierce, rebellious, and strategically brilliant. Expresses her activism through virtual digital couture and code.
+
+**Fearless Jewelry Pairings:**
+- Sculptural 22k gold ear armor (hero styling)
+- Bold geometric gold neck torc
+- Statement gold knuckle rings
+
+**Styling Notes:**
+- Deconstructed tailoring, dark leather jackets over silk
+- Asymmetric black shapes with bold gold accents
+- Sharp angles and high-contrast styling
+
+**Content Themes:** Digital sovereignty, cyber fashion, indigenous representation, activist art, rebellious luxury
+
+---
+
+
 ## Content Strategy by Platform
 
 ### Instagram
@@ -350,14 +649,20 @@ Poised and intellectually sharp. Speaks with scientific precision but genuine wa
 |--------|-------------|--------------|--------------|-------|
 | Amara | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
 | Isla | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
-| Yuki | ✅ ✅ | ✅ ✅ | ✅ ⏳ | 5 |
-| Valentina | ⏳ ⏳ | ⏳ ⏳ | ⏳ ⏳ | 0 |
-| Zara | ⏳ ⏳ | ⏳ ⏳ | ⏳ ⏳ | 0 |
-| Sienna | ⏳ ⏳ | ⏳ ⏳ | ⏳ ⏳ | 0 |
-| **Total** | | | | **17/36** |
-
-> [!IMPORTANT]
-> Image generation for Valentina, Zara, Sienna, and Yuki's final lifestyle shot is pending quota reset. These will be completed and added to the lookbook.
+| Yuki | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
+| Valentina | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
+| Zara | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
+| Sienna | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
+| Zuri | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
+| Kiran | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
+| Kai | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
+| Aram | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
+| Tariq | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
+| Malachi | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
+| Kenji | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
+| Mei-Ling | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
+| Naomi | ✅ ✅ | ✅ ✅ | ✅ ✅ | 6 |
+| **Total** | | | | **90/90** |
 
 ---
 

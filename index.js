@@ -247,39 +247,206 @@
     const profiles = document.querySelectorAll('.avatar-profile');
 
     profiles.forEach(profile => {
-      const mainImage = profile.querySelector('.avatar-profile__main-image img');
-      const placeholder = profile.querySelector('.avatar-profile__placeholder');
+      const mainImgContainer = profile.querySelector('.avatar-profile__main-image');
+      if (!mainImgContainer) return;
+
+      const placeholder = mainImgContainer.querySelector('.avatar-profile__placeholder');
+      const avatarName = placeholder ? placeholder.textContent : 'IMAGE';
       const thumbs = profile.querySelectorAll('.avatar-profile__thumb');
+      if (!thumbs.length) return;
 
-      thumbs.forEach(thumb => {
-        thumb.addEventListener('click', () => {
-          const src = thumb.getAttribute('data-src');
-          const label = thumb.getAttribute('data-label');
+      // Create track container
+      const track = document.createElement('div');
+      track.className = 'avatar-profile__slider-track';
 
-          // Update active state
-          thumbs.forEach(t => t.classList.remove('active'));
-          thumb.classList.add('active');
+      // Build slides
+      thumbs.forEach((thumb, index) => {
+        const src = thumb.getAttribute('data-src');
+        const label = thumb.getAttribute('data-label') || `${avatarName} - Image ${index + 1}`;
 
-          // Fade transition
-          if (mainImage) {
-            mainImage.style.opacity = '0';
-            setTimeout(() => {
-              mainImage.src = src;
-              mainImage.alt = label || '';
-              mainImage.style.opacity = '1';
+        const slide = document.createElement('div');
+        slide.className = 'avatar-profile__slide';
+        slide.setAttribute('data-index', index);
 
-              // Show/hide placeholder based on image load
-              mainImage.onerror = () => {
-                mainImage.style.display = 'none';
-                if (placeholder) placeholder.style.display = 'flex';
-              };
-              mainImage.onload = () => {
-                mainImage.style.display = 'block';
-                if (placeholder) placeholder.style.display = 'none';
-              };
-            }, 300);
-          }
+        const img = document.createElement('img');
+        img.className = 'avatar-profile__slide-img';
+        img.alt = label;
+        img.loading = index === 0 ? 'eager' : 'lazy';
+
+        const slidePlaceholder = document.createElement('div');
+        slidePlaceholder.className = 'avatar-profile__slide-placeholder';
+        slidePlaceholder.textContent = avatarName;
+
+        // Image load/error handlers
+        img.onload = () => {
+          img.style.display = 'block';
+          slidePlaceholder.style.display = 'none';
+        };
+        img.onerror = () => {
+          img.style.display = 'none';
+          slidePlaceholder.style.display = 'flex';
+        };
+
+        // Set src (starts loading)
+        img.src = src;
+
+        slide.appendChild(img);
+        slide.appendChild(slidePlaceholder);
+        track.appendChild(slide);
+      });
+
+      // Clear main container and append track
+      mainImgContainer.innerHTML = '';
+      mainImgContainer.appendChild(track);
+
+      // Create Navigation Arrows
+      const leftArrow = document.createElement('button');
+      leftArrow.className = 'avatar-profile__arrow avatar-profile__arrow--left disabled';
+      leftArrow.setAttribute('aria-label', 'Previous image');
+      leftArrow.innerHTML = `<svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>`;
+
+      const rightArrow = document.createElement('button');
+      rightArrow.className = 'avatar-profile__arrow avatar-profile__arrow--right';
+      if (thumbs.length <= 1) rightArrow.classList.add('disabled');
+      rightArrow.setAttribute('aria-label', 'Next image');
+      rightArrow.innerHTML = `<svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
+
+      mainImgContainer.appendChild(leftArrow);
+      mainImgContainer.appendChild(rightArrow);
+
+      // Helpers
+      const getIndex = () => {
+        const width = track.clientWidth;
+        if (width <= 0) return 0;
+        return Math.round(track.scrollLeft / width);
+      };
+
+      const updateActiveStates = () => {
+        const index = getIndex();
+        thumbs.forEach((t, i) => {
+          t.classList.toggle('active', i === index);
         });
+        leftArrow.classList.toggle('disabled', index === 0);
+        rightArrow.classList.toggle('disabled', index === thumbs.length - 1);
+      };
+
+      // Scroll event (Track -> Thumbs/Arrows)
+      let isScrolling = false;
+      track.addEventListener('scroll', () => {
+        if (!isScrolling) {
+          window.requestAnimationFrame(() => {
+            updateActiveStates();
+            isScrolling = false;
+          });
+          isScrolling = true;
+        }
+      });
+
+      // Thumbnail clicks (Thumbs -> Track)
+      thumbs.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => {
+          const width = track.clientWidth;
+          track.scrollTo({
+            left: index * width,
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      // Arrow clicks (Arrows -> Track)
+      leftArrow.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const index = getIndex();
+        if (index > 0) {
+          track.scrollTo({
+            left: (index - 1) * track.clientWidth,
+            behavior: 'smooth'
+          });
+        }
+      });
+
+      rightArrow.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const index = getIndex();
+        if (index < thumbs.length - 1) {
+          track.scrollTo({
+            left: (index + 1) * track.clientWidth,
+            behavior: 'smooth'
+          });
+        }
+      });
+
+      // Keyboard navigation (Keyboard -> Track)
+      mainImgContainer.setAttribute('tabindex', '0');
+      
+      let isHovered = false;
+      mainImgContainer.addEventListener('mouseenter', () => { isHovered = true; });
+      mainImgContainer.addEventListener('mouseleave', () => { isHovered = false; });
+
+      const handleKeyDown = (e) => {
+        if (e.key === 'ArrowLeft') {
+          const index = getIndex();
+          if (index > 0) {
+            e.preventDefault();
+            track.scrollTo({
+              left: (index - 1) * track.clientWidth,
+              behavior: 'smooth'
+            });
+          }
+        } else if (e.key === 'ArrowRight') {
+          const index = getIndex();
+          if (index < thumbs.length - 1) {
+            e.preventDefault();
+            track.scrollTo({
+              left: (index + 1) * track.clientWidth,
+              behavior: 'smooth'
+            });
+          }
+        }
+      };
+
+      mainImgContainer.addEventListener('keydown', handleKeyDown);
+      window.addEventListener('keydown', (e) => {
+        if (isHovered && document.activeElement !== mainImgContainer) {
+          handleKeyDown(e);
+        }
+      });
+
+      // Mouse drag-to-scroll (Drag -> Track)
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      track.addEventListener('mousedown', (e) => {
+        if (e.button !== 0) return;
+        isDown = true;
+        mainImgContainer.classList.add('grabbing');
+        track.style.scrollSnapType = 'none';
+        startX = e.pageX - track.offsetLeft;
+        scrollLeft = track.scrollLeft;
+      });
+
+      const endDrag = () => {
+        if (!isDown) return;
+        isDown = false;
+        mainImgContainer.classList.remove('grabbing');
+        track.style.scrollSnapType = 'x mandatory';
+        const index = getIndex();
+        track.scrollTo({
+          left: index * track.clientWidth,
+          behavior: 'smooth'
+        });
+      };
+
+      track.addEventListener('mouseleave', endDrag);
+      track.addEventListener('mouseup', endDrag);
+
+      track.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - track.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        track.scrollLeft = scrollLeft - walk;
       });
     });
   }
