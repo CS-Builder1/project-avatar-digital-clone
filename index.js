@@ -1,22 +1,18 @@
 /* ═══════════════════════════════════════════════════════════════
-   FEARLESS JEWELLERY — Digital Avatar Lookbook
-   Interactive JavaScript
+   FEARLESS JEWELLERY — Home Page
+   Hero particle canvas, social-template tabs and gallery card tilt.
+   Shared navigation / reveal / smooth-scroll live in common.js.
    ═══════════════════════════════════════════════════════════════ */
 
 (function () {
   'use strict';
 
-  // ─── DOM Ready ───
   document.addEventListener('DOMContentLoaded', init);
 
   function init() {
     initParticles();
-    initScrollReveal();
-    initNavigation();
-    initGalleryThumbnails();
     initSocialTabs();
-    initParallax();
-    initSmoothScroll();
+    initCardTilt();
   }
 
   /* ═══════════════════════════════════════════════════════════════
@@ -138,320 +134,6 @@
   }
 
   /* ═══════════════════════════════════════════════════════════════
-     SCROLL REVEAL — Intersection Observer
-     ═══════════════════════════════════════════════════════════════ */
-  function initScrollReveal() {
-    const reveals = document.querySelectorAll('.reveal');
-    if (!reveals.length) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            // Stagger children in grids
-            const parent = entry.target.closest('.gallery__grid, .social__template-grid');
-            if (parent) {
-              const siblings = parent.querySelectorAll('.reveal');
-              const siblingIndex = Array.from(siblings).indexOf(entry.target);
-              entry.target.style.transitionDelay = `${siblingIndex * 0.1}s`;
-            }
-
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -60px 0px'
-      }
-    );
-
-    reveals.forEach(el => observer.observe(el));
-  }
-
-  /* ═══════════════════════════════════════════════════════════════
-     NAVIGATION
-     ═══════════════════════════════════════════════════════════════ */
-  function initNavigation() {
-    const nav = document.getElementById('nav');
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav__links');
-    const links = document.querySelectorAll('.nav__link');
-
-    // Scroll state
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.scrollY;
-      nav.classList.toggle('scrolled', currentScroll > 80);
-      lastScroll = currentScroll;
-    }, { passive: true });
-
-    // Mobile menu toggle
-    if (hamburger && navLinks) {
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        navLinks.classList.toggle('open');
-        document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
-      });
-
-      // Close on link click
-      links.forEach(link => {
-        link.addEventListener('click', () => {
-          hamburger.classList.remove('open');
-          navLinks.classList.remove('open');
-          document.body.style.overflow = '';
-        });
-      });
-
-      // Close on outside click
-      document.addEventListener('click', (e) => {
-        if (navLinks.classList.contains('open') &&
-            !navLinks.contains(e.target) &&
-            !hamburger.contains(e.target)) {
-          hamburger.classList.remove('open');
-          navLinks.classList.remove('open');
-          document.body.style.overflow = '';
-        }
-      });
-    }
-
-    // Active section highlighting
-    const sections = document.querySelectorAll('section[id]');
-    const observerOptions = {
-      threshold: 0.3,
-      rootMargin: `-${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 72}px 0px -40% 0px`
-    };
-
-    const sectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          links.forEach(link => {
-            link.classList.toggle('active',
-              link.getAttribute('href') === `#${id}` ||
-              (id.includes('-section') && link.getAttribute('href') === '#amara-section')
-            );
-          });
-        }
-      });
-    }, observerOptions);
-
-    sections.forEach(section => sectionObserver.observe(section));
-  }
-
-  /* ═══════════════════════════════════════════════════════════════
-     GALLERY THUMBNAILS — Image Switching
-     ═══════════════════════════════════════════════════════════════ */
-  function initGalleryThumbnails() {
-    const profiles = document.querySelectorAll('.avatar-profile');
-
-    profiles.forEach(profile => {
-      const mainImgContainer = profile.querySelector('.avatar-profile__main-image');
-      if (!mainImgContainer) return;
-
-      const placeholder = mainImgContainer.querySelector('.avatar-profile__placeholder');
-      const avatarName = placeholder ? placeholder.textContent : 'IMAGE';
-      const thumbs = profile.querySelectorAll('.avatar-profile__thumb');
-      if (!thumbs.length) return;
-
-      // Create track container
-      const track = document.createElement('div');
-      track.className = 'avatar-profile__slider-track';
-
-      // Build slides
-      thumbs.forEach((thumb, index) => {
-        const src = thumb.getAttribute('data-src');
-        const label = thumb.getAttribute('data-label') || `${avatarName} - Image ${index + 1}`;
-
-        const slide = document.createElement('div');
-        slide.className = 'avatar-profile__slide';
-        slide.setAttribute('data-index', index);
-
-        const img = document.createElement('img');
-        img.className = 'avatar-profile__slide-img';
-        img.alt = label;
-        img.loading = index === 0 ? 'eager' : 'lazy';
-
-        const slidePlaceholder = document.createElement('div');
-        slidePlaceholder.className = 'avatar-profile__slide-placeholder';
-        slidePlaceholder.textContent = avatarName;
-
-        // Image load/error handlers
-        img.onload = () => {
-          img.style.display = 'block';
-          slidePlaceholder.style.display = 'none';
-        };
-        img.onerror = () => {
-          img.style.display = 'none';
-          slidePlaceholder.style.display = 'flex';
-        };
-
-        // Set src (starts loading)
-        img.src = src;
-
-        slide.appendChild(img);
-        slide.appendChild(slidePlaceholder);
-        track.appendChild(slide);
-      });
-
-      // Clear main container and append track
-      mainImgContainer.innerHTML = '';
-      mainImgContainer.appendChild(track);
-
-      // Create Navigation Arrows
-      const leftArrow = document.createElement('button');
-      leftArrow.className = 'avatar-profile__arrow avatar-profile__arrow--left disabled';
-      leftArrow.setAttribute('aria-label', 'Previous image');
-      leftArrow.innerHTML = `<svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>`;
-
-      const rightArrow = document.createElement('button');
-      rightArrow.className = 'avatar-profile__arrow avatar-profile__arrow--right';
-      if (thumbs.length <= 1) rightArrow.classList.add('disabled');
-      rightArrow.setAttribute('aria-label', 'Next image');
-      rightArrow.innerHTML = `<svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
-
-      mainImgContainer.appendChild(leftArrow);
-      mainImgContainer.appendChild(rightArrow);
-
-      // Helpers
-      const getIndex = () => {
-        const width = track.clientWidth;
-        if (width <= 0) return 0;
-        return Math.round(track.scrollLeft / width);
-      };
-
-      const updateActiveStates = () => {
-        const index = getIndex();
-        thumbs.forEach((t, i) => {
-          t.classList.toggle('active', i === index);
-        });
-        leftArrow.classList.toggle('disabled', index === 0);
-        rightArrow.classList.toggle('disabled', index === thumbs.length - 1);
-      };
-
-      // Scroll event (Track -> Thumbs/Arrows)
-      let isScrolling = false;
-      track.addEventListener('scroll', () => {
-        if (!isScrolling) {
-          window.requestAnimationFrame(() => {
-            updateActiveStates();
-            isScrolling = false;
-          });
-          isScrolling = true;
-        }
-      });
-
-      // Thumbnail clicks (Thumbs -> Track)
-      thumbs.forEach((thumb, index) => {
-        thumb.addEventListener('click', () => {
-          const width = track.clientWidth;
-          track.scrollTo({
-            left: index * width,
-            behavior: 'smooth'
-          });
-        });
-      });
-
-      // Arrow clicks (Arrows -> Track)
-      leftArrow.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const index = getIndex();
-        if (index > 0) {
-          track.scrollTo({
-            left: (index - 1) * track.clientWidth,
-            behavior: 'smooth'
-          });
-        }
-      });
-
-      rightArrow.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const index = getIndex();
-        if (index < thumbs.length - 1) {
-          track.scrollTo({
-            left: (index + 1) * track.clientWidth,
-            behavior: 'smooth'
-          });
-        }
-      });
-
-      // Keyboard navigation (Keyboard -> Track)
-      mainImgContainer.setAttribute('tabindex', '0');
-      
-      let isHovered = false;
-      mainImgContainer.addEventListener('mouseenter', () => { isHovered = true; });
-      mainImgContainer.addEventListener('mouseleave', () => { isHovered = false; });
-
-      const handleKeyDown = (e) => {
-        if (e.key === 'ArrowLeft') {
-          const index = getIndex();
-          if (index > 0) {
-            e.preventDefault();
-            track.scrollTo({
-              left: (index - 1) * track.clientWidth,
-              behavior: 'smooth'
-            });
-          }
-        } else if (e.key === 'ArrowRight') {
-          const index = getIndex();
-          if (index < thumbs.length - 1) {
-            e.preventDefault();
-            track.scrollTo({
-              left: (index + 1) * track.clientWidth,
-              behavior: 'smooth'
-            });
-          }
-        }
-      };
-
-      mainImgContainer.addEventListener('keydown', handleKeyDown);
-      window.addEventListener('keydown', (e) => {
-        if (isHovered && document.activeElement !== mainImgContainer) {
-          handleKeyDown(e);
-        }
-      });
-
-      // Mouse drag-to-scroll (Drag -> Track)
-      let isDown = false;
-      let startX;
-      let scrollLeft;
-
-      track.addEventListener('mousedown', (e) => {
-        if (e.button !== 0) return;
-        isDown = true;
-        mainImgContainer.classList.add('grabbing');
-        track.style.scrollSnapType = 'none';
-        startX = e.pageX - track.offsetLeft;
-        scrollLeft = track.scrollLeft;
-      });
-
-      const endDrag = () => {
-        if (!isDown) return;
-        isDown = false;
-        mainImgContainer.classList.remove('grabbing');
-        track.style.scrollSnapType = 'x mandatory';
-        const index = getIndex();
-        track.scrollTo({
-          left: index * track.clientWidth,
-          behavior: 'smooth'
-        });
-      };
-
-      track.addEventListener('mouseleave', endDrag);
-      track.addEventListener('mouseup', endDrag);
-
-      track.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - track.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        track.scrollLeft = scrollLeft - walk;
-      });
-    });
-  }
-
-  /* ═══════════════════════════════════════════════════════════════
      SOCIAL MEDIA TABS
      ═══════════════════════════════════════════════════════════════ */
   function initSocialTabs() {
@@ -462,16 +144,13 @@
       tab.addEventListener('click', () => {
         const platform = tab.getAttribute('data-platform');
 
-        // Update tabs
         tabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
 
-        // Update panels
         panels.forEach(panel => {
           const isTarget = panel.getAttribute('data-platform') === platform;
           panel.classList.toggle('active', isTarget);
 
-          // Re-trigger reveal animations for the new panel
           if (isTarget) {
             const reveals = panel.querySelectorAll('.reveal:not(.visible)');
             reveals.forEach((el, i) => {
@@ -485,65 +164,11 @@
   }
 
   /* ═══════════════════════════════════════════════════════════════
-     PARALLAX — Subtle background effects
+     GALLERY CARD TILT
      ═══════════════════════════════════════════════════════════════ */
-  function initParallax() {
-    const accents = document.querySelectorAll('.avatar-profile__bg-accent');
-    if (!accents.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    let ticking = false;
-
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const scrollY = window.scrollY;
-          accents.forEach(accent => {
-            const section = accent.closest('.avatar-profile');
-            const rect = section.getBoundingClientRect();
-            const sectionTop = rect.top + scrollY;
-            const offset = (scrollY - sectionTop) * 0.08;
-
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-              accent.style.transform = `translateY(${offset}px)`;
-            }
-          });
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
-  }
-
-  /* ═══════════════════════════════════════════════════════════════
-     SMOOTH SCROLL — Enhanced anchor behavior
-     ═══════════════════════════════════════════════════════════════ */
-  function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').slice(1);
-        const target = document.getElementById(targetId);
-
-        if (target) {
-          const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 72;
-          const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
-
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  }
-
-  /* ═══════════════════════════════════════════════════════════════
-     UTILITY — Hover tilt effect for gallery cards
-     ═══════════════════════════════════════════════════════════════ */
-  (function initCardTilt() {
-    const cards = document.querySelectorAll('.gallery__card');
-
+  function initCardTilt() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const cards = document.querySelectorAll('.gallery__card');
 
     cards.forEach(card => {
       card.addEventListener('mousemove', (e) => {
@@ -563,6 +188,5 @@
         setTimeout(() => { card.style.transition = ''; }, 600);
       });
     });
-  })();
-
+  }
 })();

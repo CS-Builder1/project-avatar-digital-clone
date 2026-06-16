@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avatar Profile — FEARLESS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body class="subpage">
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- NAVIGATION                                              -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <nav class="nav scrolled" id="nav">
+    <a href="index.html#hero" class="nav__logo">FEARLESS</a>
+    <div class="nav__links">
+      <a href="index.html#gallery" class="nav__link">Collection</a>
+      <a href="index.html#social" class="nav__link">Templates</a>
+    </div>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- AVATAR PROFILE (rendered from ?id= by avatar.js)        -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <main class="profile-main">
+    <section class="avatar-profile" id="profile" data-profile-page></section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- FOOTER                                                  -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer__glow"></div>
+    <div class="footer__content">
+      <div class="footer__brand">
+        <h2 class="footer__logo">FEARLESS</h2>
+        <p class="footer__tagline">A Digital Avatar Collection</p>
+      </div>
+      <div class="footer__divider"></div>
+      <div class="footer__credits">
+        <p>Created for <strong>Ketisha</strong> &times; <strong>Fearless Jewellery</strong></p>
+        <p>Founded by <strong>Eleanor Prospere</strong> &mdash; St. Lucia</p>
+      </div>
+      <div class="footer__links">
+        <a href="https://fearlessjewellery.com" target="_blank" rel="noopener noreferrer" class="footer__link">
+          fearlessjewellery.com
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+          </svg>
+        </a>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Fearless Jewellery. All avatars are digital creations for marketing purposes.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="avatars.js"></script>
+  <script src="common.js"></script>
+  <script src="avatar.js"></script>
+</body>
+</html>

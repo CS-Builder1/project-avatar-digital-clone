@@ -45,6 +45,8 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -52,6 +54,9 @@ body {
   background: var(--black);
   color: var(--warm-white);
   line-height: 1.7;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -930,6 +935,107 @@ button {
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   PROFILE PAGE (avatar.html)
+   ═══════════════════════════════════════════════════════════════ */
+.subpage .nav {
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 1px 0 rgba(201,169,78,0.12);
+}
+
+.profile-main {
+  padding-top: var(--nav-height);
+  min-height: 70vh;
+}
+
+.profile-main .avatar-profile {
+  background: var(--black);
+}
+
+.avatar-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  transition: color var(--transition-base);
+}
+
+.avatar-back-link:hover {
+  color: var(--gold);
+}
+
+/* Prev / Next pager */
+.avatar-pager {
+  max-width: var(--container-max);
+  margin: clamp(48px, 7vw, 90px) auto 0;
+  padding-top: 32px;
+  border-top: 1px solid rgba(201,169,78,0.12);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.avatar-pager__link {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(201,169,78,0.15);
+  transition: border-color var(--transition-base), transform var(--transition-base), background var(--transition-base);
+  min-width: 0;
+}
+
+.avatar-pager__link--next {
+  text-align: right;
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+.avatar-pager__link:hover {
+  border-color: var(--gold);
+  background: rgba(201,169,78,0.06);
+  transform: translateY(-2px);
+}
+
+.avatar-pager__dir {
+  font-family: var(--font-accent);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.avatar-pager__name {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+
+/* Not found state */
+.avatar-missing {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: clamp(40px, 8vw, 100px) 0;
+}
+
+.avatar-missing__text {
+  color: var(--text-muted);
+  margin: 1rem 0 2rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
    SECTION 4 — SOCIAL MEDIA TEMPLATES
    ═══════════════════════════════════════════════════════════════ */
 .social {
@@ -1451,6 +1557,16 @@ button {
     padding: 10px 18px;
     font-size: 0.65rem;
   }
+
+  .avatar-pager {
+    flex-direction: column;
+  }
+
+  .avatar-pager__link--next {
+    text-align: left;
+    align-items: flex-start;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1460,7 +1576,8 @@ button {
   }
 
   .hero__title {
-    letter-spacing: 0.15em;
+    font-size: clamp(2.6rem, 13vw, 4rem);
+    letter-spacing: 0.12em;
   }
 }
 
