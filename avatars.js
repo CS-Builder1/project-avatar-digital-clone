@@ -48,7 +48,7 @@
       styling: "Porcelain skin, a sharp geometric bob, and a piercing gaze that commands attention without effort. Her wardrobe is monochromatic precision — clean lines, sculptural forms, and a single piece of Fearless gold that becomes the focal point of every look."
     },
     valentina: {
-      number: '04', name: 'Valentina', title: 'The Passionate Creator', group: 'female', hue: 15, set: 'seven',
+      number: '04', name: 'Valentina', title: 'The Passionate Creator', group: 'female', hue: 15, set: 'full',
       origin: 'South America — Brazilian / Colombian',
       profession: 'Celebrated Muralist & Community Activist',
       backstory: "Valentina's canvas is the city itself. From the favelas of São Paulo to the colorful barrios of Bogotá, her massive murals tell stories of hope, resistance, and the unbreakable spirit of Latin American women. She paints with the same fire that fuels her activism — organizing community art programs, mentoring young artists, and using her platform to amplify marginalized voices.",
@@ -57,7 +57,7 @@
       styling: "Warm olive-bronze skin, thick dark wavy hair that moves with energy, and expressive eyes that burn with passion. Her style is vibrant bohemian-luxe — rich colors, artisan textures, and Fearless gold that feels like wearable art against her sun-warmed skin."
     },
     zara: {
-      number: '05', name: 'Zara', title: 'The Elegant Disruptor', group: 'female', hue: 320, set: 'six',
+      number: '05', name: 'Zara', title: 'The Elegant Disruptor', group: 'female', hue: 320, set: 'full',
       origin: 'Middle East / North Africa — Moroccan / Lebanese',
       profession: 'Human Rights Lawyer & Fashion Philanthropist',
       backstory: "Zara walks between two worlds with effortless grace — the marbled halls of international courts and the ateliers of Marrakech and Beirut. After a distinguished career in human rights law, she channeled her influence into fashion philanthropy, funding artisan cooperatives and ethical luxury initiatives across the MENA region. She proves that elegance and justice are not mutually exclusive.",
@@ -93,7 +93,7 @@
       styling: "Warm olive skin with golden undertones, completely shaved head, large expressive dark eyes, and strong cheekbones. Minimalist deconstructed tailoring in all-black linen or raw silk, boxy blazers, and zero color except for glowing 22k gold jewelry."
     },
     kai: {
-      number: '09', name: 'Kai', title: 'The Maritime Visionary', group: 'male', hue: 140, set: 'six',
+      number: '09', name: 'Kai', title: 'The Maritime Visionary', group: 'male', hue: 140, set: 'full',
       origin: 'Pacific Islands / East Asia (Hawaii / Vietnam)',
       profession: 'Marine Biologist & Sustainable Pearl Farmer',
       backstory: "Raised in a coastal fishing village, Kai earned a scholarship in marine science and turned his passion for the ocean into a boutique blue-economy pearl farming business. His farming methods actively restore damaged coral reefs, proving that commercial luxury and ecological preservation can go hand in hand.",
@@ -102,7 +102,7 @@
       styling: "Sun-bronzed skin with warm copper undertones, athletic build, short dark hair in a textured crop, and warm eyes. Styled in relaxed coastal luxury: high-quality raw linen shirts in cream/parchment and structured dark charcoal trousers."
     },
     aram: {
-      number: '10', name: 'Aram', title: 'The Heritage Architect', group: 'male', hue: 300, set: 'six',
+      number: '10', name: 'Aram', title: 'The Heritage Architect', group: 'male', hue: 300, set: 'full',
       origin: 'Levant — Lebanese / Syrian (Beirut / Paris)',
       profession: 'Restoration Architect & Museum Designer',
       backstory: "Born into a family of classical musicians, Aram studied architecture in Paris before returning to the Levant to design museums and restore historical ruins. His architectural designs marry ancient geometry with sleek contemporary materials, preserving history while creating space for modern dialogues.",
@@ -138,7 +138,7 @@
       styling: "Warm golden-brown skin, striking dark eyes, short curly hair styled in a clean taper fade, and defined jawline. Styled in tailored luxury sportswear, structured high-necked sweaters, and modern tech-wear blazers."
     },
     meiling: {
-      number: '14', name: 'Mei-Ling', title: 'The Culinary Alchemist', group: 'female', hue: 330, set: 'seven',
+      number: '14', name: 'Mei-Ling', title: 'The Culinary Alchemist', group: 'female', hue: 330, set: 'full',
       origin: 'Mixed — Black / East Asian (New York / Taipei)',
       profession: 'Michelin-Starred Chef & Culinary Anthropologist',
       backstory: "Mei-Ling Jackson-Tanaka fused her Jamaican and Taiwanese roots into a Michelin-starred fine-dining concept. Her culinary philosophy celebrates global culinary migrations, tracing the deep cultural exchange of agricultural and spice paths between East Asia and the Caribbean islands.",
@@ -147,7 +147,7 @@
       styling: "Warm caramel skin, dark curly-wavy hair pulled up in a messy bun with gold pins, warm expressive eyes, and elegant bone structure. Styled in draped linen kimonos, silk chef coats in obsidian, and gold hairpins as highlights."
     },
     naomi: {
-      number: '15', name: 'Naomi', title: 'The Cyber-Punk Activist', group: 'female', hue: 45, set: 'six',
+      number: '15', name: 'Naomi', title: 'The Cyber-Punk Activist', group: 'female', hue: 45, set: 'full',
       origin: 'Indigenous / Scandinavian (Navajo / Diné)',
       profession: 'Digital Fashion Designer & Web Developer',
       backstory: "Naomi merges traditional Navajo weaving patterns with virtual cyber-punk aesthetics in her digital clothing line. Coding decentralized platforms, she fights to protect indigenous intellectual property and digital sovereignty, advocating for indigenous artists in digital design spaces.",
